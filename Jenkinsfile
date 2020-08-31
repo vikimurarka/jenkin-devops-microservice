@@ -18,5 +18,16 @@ pipeline {
 			echo "Test"
 			}
 		}
+	} post {
+		always {
+			echo 'Post actions after all stage has run'
+		}
+		success {
+			echo 'I run when build is suucessful'
+		}
+		failure {
+			echo 'I run when build fails'
+		}
+
 	}
 }
