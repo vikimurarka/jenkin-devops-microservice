@@ -18,7 +18,9 @@ pipeline {
 			echo "Test"
 			}
 		}
-	} post {
+	} 
+	
+	post {
 		always {
 			echo 'Post actions after all stage has run'
 		}
