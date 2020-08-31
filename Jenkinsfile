@@ -21,6 +21,7 @@ pipeline {
 	} 
 	
 	post {
+		//five types of post action "always","success","failure","unstable","changed"
 		always {
 			echo 'Post actions after all stage has run'
 		}
@@ -29,6 +30,13 @@ pipeline {
 		}
 		failure {
 			echo 'I run when build fails'
+		}
+		unstable {
+			echo 'when there is a test failue'
+		}
+
+		changed{
+			echo 'I run only when status of build changes, either from success to fail or vice versa'
 		}
 
 	}
