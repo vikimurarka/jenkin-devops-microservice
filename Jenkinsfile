@@ -1,5 +1,5 @@
 pipeline {
-	agent { docker { image 'maven:3.6.3'}}//want o use image with maven installed in it
+	//agent { docker { image 'maven:3.6.3'}}//want o use image with maven installed in it
 	stages{
 		stage('Build') {
 			steps{
